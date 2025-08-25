@@ -67,7 +67,7 @@ class Item:
             contents += features + '\n'
         self.details = data['details']
         if self.details:
-            contents += self.scrub_details() + '\n'
+            contents += self.scrub_detail() + '\n'
         if len(contents) > MIN_CHARS:
             contents = contents[:CEILING_CHARS]
             text = f"{self.scrub(self.title)}\n{self.scrub(contents)}"
